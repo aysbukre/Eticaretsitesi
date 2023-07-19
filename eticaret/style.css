@@ -1,0 +1,321 @@
+/* base css starts */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,500;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+
+p {
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 25px;
+    color: rgb(176, 26, 176);
+    display: flex;
+}
+
+button {
+    margin-top: 20px;
+    border: none;
+}
+
+.btn{
+    display : inline-block;
+    padding: 0 25px;
+    border: 2px solid rgb(176, 26, 176);
+    font-weight: 500;
+    line-height: 40px;
+    transition: .2s ease all;
+    cursor: pointer;
+}
+
+.btn-sm{
+    line-height: 33px;
+}
+
+.btn-md{
+    line-height: 40px;
+}
+
+.btn-lg{
+    line-height: 45px;
+}
+.btn-primary{
+    background-color: plum;
+    color: #fff;
+    border-color: plum;
+}
+    
+.btn-primary:hover{
+    background-color: #fff;
+    color: rgb(176, 26, 176);
+    
+}
+
+
+/* base css ends */
+
+/* header css starts */
+
+header {
+    border-bottom: 1px solid #dee0ea;
+    position: relative;
+}
+
+.global-notification {
+    background-color: plum;
+    padding: 14px 0;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.global-notification a {
+    font-weight: 600;
+}
+
+
+.header-row {
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.header-center .navigation .menu-list {
+    display: flex;
+    column-gap: 27px;
+    align-items: center;
+}
+
+.header-center .menu-list .menu-list-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 90px;
+}
+
+.header-center .menu-list .menu-link {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    position: relative;
+}
+
+.header-center .menu-list .menu-link::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: plum;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: .2s ease width;
+
+}
+
+.header-center .menu-list .menu-list-item:hover .menu-link::after {
+    width: 100%;
+}
+
+.header-center .menu-list .menu-link.active::after {
+    width: 100%;
+
+}
+
+.header-center .menu-list i {
+    font-size: 12px;
+}
+
+.header-right .header-right-links {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+
+}
+
+.header-right .bi-person-circle {
+    font-size: 23px;
+}
+
+.header-right .toggle-button {
+    border: none;
+    background-color: transparent;
+}
+
+.header-right i {
+    font-size: 21px;
+    display: flex;
+}
+
+.header-right .header-cart {
+    position: relative;
+}
+
+.header-right .header-cart-link .header-cart-count {
+    width: 16px;
+    height: 16px;
+    background-color: plum;
+    color: white;
+    font-size: 10px;
+    border-radius: 100%;
+    position: absolute;
+    top: -11px;
+    right: -11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+/*menu dropdown start*/
+header .menu-dropdown-wrapper {
+    position: absolute;
+    top: 100%;
+    left: -30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease;
+}
+
+header .menu-dropdown-content {
+    width: 220px;
+    background-color: white;
+    border: 1px solid #dee0ea;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 0;
+}
+
+header .menu-dropdown-content a {
+    display: flex;
+    padding: 4px 30px;
+    font-size: 14px;
+    transition: color .2s ease;
+}
+
+header .menu-dropdown-content a:hover {
+    color: plum;
+}
+
+.header-center .menu-list .menu-list-item:hover .menu-dropdown-wrapper {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image10 {
+    width: 500px;
+    height: 400px;
+}
+
+
+.menu-dropdown-megamenu {
+    background-color: white;
+    border: 1px solid #dee0ea;
+    padding: 22px;
+    display: flex;
+    column-gap: 50px;
+}
+
+.megamenu-wrapper .menu-dropdown-wrapper {
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.megamenu-wrapper {
+    position: static !important;
+}
+
+.megamenu-wrapper .megamenu-links {
+    display: flex;
+    column-gap: 50px;
+}
+
+.megamenu-wrapper .megamenu-links .megamenu-products-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menu-dropdown-wrapper .deneme {
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 26px;
+    margin-bottom: 10px;
+}
+
+.megamenu-wrapper .megamenu-menu-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+
+.megamenu-wrapper .megamenu-menu-list a {
+    font-size: 14px;
+
+}
+
+.megamenu-wrapper .megamenu-single-title {
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+.megamenu-wrapper .megamenu-single-subtitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+
+}
+
+.megamenu-wrapper .megamenu-single-button {
+    margin-bottom: 4px;
+}
+
+/*menu dropdown end*/
+
+
+/* header css ends */
